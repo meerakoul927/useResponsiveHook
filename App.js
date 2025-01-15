@@ -6,13 +6,14 @@ import useResponsiveHook from './utils/useResponsiveHook/useResponsiveHook';
 
 function App() {
    
-    useEffect(()=>{
-        const result = useResponsiveHook();
-        console.log(result);
-    },[window.innerWidth])
-   
+   const {isMobile , isTablet , isDesktop} = useResponsiveHook();
+   console.log(isMobile , isTablet , isDesktop);
   return (
-    <div>App</div>
+    <>
+        <div>App</div>
+        
+       
+    </>
   )
 }
 
